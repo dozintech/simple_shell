@@ -1,4 +1,4 @@
-.TH hsh 1 "August 31, 2021" "1.0" "hsh General Commands Manual"
+.TH hsh 1 "MAY 18, 2022" "1.0" "hsh General Commands Manual"
 
 .SH NAME
 
@@ -9,13 +9,11 @@
 .SH SYNOPSIS
 
 .B  ./hsh
-.I (no options yet)
-
 
 
 .SH DESCRIPTION
 
-simple_shell is a command line interpreter, or shell, in the tradition of the first Unix shell written by Ken Thompson. This shell is intentionally minimalistic, yet includes the basic functionality of a traditional Unix-like command line interface. simple_shell is desgined to run on the linux environment.
+simple_shell is a command line interpreter, it includes the basic functionality of a traditional Unix-like command line interface. simple_shell is desgined to run on the linux environment.
 
 
 .SH OVERVIEW
@@ -28,7 +26,7 @@ Reading from either the terminal or files, simple_shell interprets and executes 
 Compile simple_shell with the GNU Compiler Collection, preferably using gcc plus the below specified flags, as per this example (note the use of the * wildcard which enables all related .c files to be compiled concurrently):
 .P
 .RS
-.B $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+.B $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 .P
 .RE
 simple_shell can be run in interactive mode by entering the below command on the command line followd by "enter." Note that the prompt ('$') will appear and you will then be in interactive mode and able to enter commands followed by "enter." 
@@ -117,16 +115,6 @@ br.
 \&_=./hsh
 .br
 \&$
-
-.SH BUGS
-No known bugs at this writing (August 31, 2021).
-Please report any issues to the authors.
-
-.SH AUTHOR
-
-Sammie Ogoigbe <ogoigbe12@gmail.com>
-
-Yohannes Getu <nede.evoli@gmail.com>
 
 .SH SEE ALSO
 sh
