@@ -46,7 +46,7 @@ This simple shell includes the basic functionality of a traditional Unix-like co
 
 ## Requirements
 
-simple shell is designed to run in the `Ubuntu 20.04 LTS` linux environment and to be compiled using the GNU compiler collection v. `gcc 12.1` with flags`-Wall, -Werror, -Wextra, pedantic, and -std=gnu89.`
+simple shell is designed to run in the `Ubuntu 20.04 LTS` linux environment and to be compiled using the GNU compiler collection v. `gcc 12.1` with flags`-Wall, -Werror, -Wextra, -pedantic, and -std=gnu89.`
 
 ## Installation
 
