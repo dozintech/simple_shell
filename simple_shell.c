@@ -8,7 +8,7 @@
  */
 static void sig_handler(int uuv)
 {
-	unsigned int sig_flag;
+	unsigned int sig_flag = 0;
 	(void) uuv;
 	if (sig_flag == 0)
 		_puts("\n$ ");
@@ -26,7 +26,7 @@ static void sig_handler(int uuv)
  */
 int main(int argc __attribute__((unused)), char **argv, char **environment)
 {
-	unsigned int sig_flag;
+	unsigned int sig_flag = 0;
 	size_t len_buffer = 0;
 	unsigned int is_pipe = 0, i;
 	vars_t vars = {NULL, NULL, NULL, 0, NULL, 0, NULL};
@@ -38,7 +38,6 @@ int main(int argc __attribute__((unused)), char **argv, char **environment)
 		is_pipe = 1;
 	if (is_pipe == 0)
 		_puts("$ ");
-	sig_flag = 0;
 	while (getline(&(vars.buffer), &len_buffer, stdin) != -1)
 	{
 		sig_flag = 1;
